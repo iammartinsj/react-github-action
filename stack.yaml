@@ -3,11 +3,11 @@ AWSTemplateFormatVersion: 2010-09-09
 Parameters:
   Name:
     Type: String
-    Description: Name of the app
+    Description:
 
   Repository:
     Type: String
-    Description: GitHub Repository URL
+    Description: https://github.com/iammartinsj/react-github-action.git
 
   Branch:
     Type: String
@@ -16,7 +16,7 @@ Parameters:
 
   OauthToken:
     Type: String
-    Description: GitHub Repository URL
+    Description: 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
     NoEcho: true
 
   Domain:
@@ -24,7 +24,7 @@ Parameters:
     Description: Domain name to host application
     Default: ""
 
-Conditions: 
+Conditions:
   UseCustomDomain: !Not [!Equals [!Ref Domain, ""]]
 
 Resources:
